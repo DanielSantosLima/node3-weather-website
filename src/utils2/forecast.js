@@ -10,7 +10,7 @@ const forecast = (lat, long, callback)=>{
         }else if(body.cod == 400){
             callback('Unable to find location. Try another search.', undefined);
         }else {
-            callback(undefined, `It's currently ${body.main.temp} degrees. The wind speed is currently ${body.wind.speed} Mph. The humidity is ${body.main.humidity} %`)
+            callback(undefined, `It's currently ${body.main.temp} degrees. The wind speed is currently ${body.wind.speed} Mph. The humidity is ${body.main.humidity} %. The minimun temperature is ${body.main.temp_min}, and the maximum temperature is ${body.main.temp_max}`)            
         }
     });
 };
